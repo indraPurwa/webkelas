@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+nav {
+	height:50px;
+	background: #999;
+}
+ul#menu, ul.sub1 {
+	list-style:none;
+}
+ul#menu > li {
+	float:left;
+	width:100px;
+	position:relative;
+	margin-right: 10px;
+}
+ul#menu > li:first-child a {
+	border-radius:0 0 10px 0;
+}
+ul#menu > li > a {
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	font-size: 14px;
+	color: aqua;
+	height: 40px;
+	line-height: 40px;
+	background-color: black;
+	border-radius:0 0 10px 10px;
+}
+/* menu navigation .sub1 */
+ul#menu ul.sub1 {
+	z-index: 1;
+    position: absolute;
+	opacity:0;
+    width: 100px;
+    top: 40px;
+	visibility:hidden;
+	transition:opacity 0.5s 0.1s ease-in-out;
+}
+ul#menu > li:hover ul.sub1 {
+	opacity:1;
+	visibility:visible;
+}
+ul.sub1 li:first-child a {
+	border-radius: 5px 5px 0 0;
+	margin-top: 10px;
+}
+ul.sub1 li:last-child > a {
+	border-radius:0 0 5px 5px;
+}
+ul.sub1 li a {
+	display: block;
+	text-decoration: none;
+	text-align: left;
+	font-size: 14px;
+	color: #0FF;
+	height: 40px;
+	line-height: 40px;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding-left: 15px;
+	width: 180px;
+}
+ul.sub1 li:first-child a:after {
+	z-index: 2;
+	content:'';
+	position:absolute;
+	top:0px;
+	left:40px;
+	border-left:9px solid transparent;
+	border-right:9px solid transparent;
+	border-bottom:10px solid #000;
+}
+ul#menu li a:hover {
+	color:tomato;
+}

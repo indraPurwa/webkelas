@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	background:#000;
+}
+#container {
+	margin:10px auto;
+	width:1024px;
+	height:auto;
+	border-radius:20px 20px;
+	box-shadow:3px 3px 30px #FFFFFF, -3px -3px 30px #FFFFFF;
+}
+#lg_uin {
+    width: 124px;
+    height: 120px;
+    box-sizing: border-box;
+    position: relative;
+    top: 2px;
+    left: 70px;
+    float: left;
+    background: url(../image/lg_uinb.gif);
+}
+#lg_si_c {
+    width: 124px;
+    height: 120px;
+    box-sizing: border-box;
+    position: relative;
+    top: 2px;
+    right: 70px;
+    float: right;
+	background: url(../image/lg_sicb.gif);
+}
+#h_atas {
+	overflow:hidden;
+	color:#FFF;
+}
+#h_atas span{
+	font-size:32px;
+	text-shadow:#000 0px 2px 2px;
+	text-align:center;
+	display:block;
+	left:3px;
+	top:40px;
+	position:relative;
+}
+#f_atas span{
+	font-size:16px;
+	color:#FFF;
+	text-shadow:#000 0px 2px 2px;
+	text-align:center;
+	display:block;
+	left:3px;
+	top:40px;
+	position:relative;
+}
+header > #h_atas{
+	width:1024px;
+	height:120px;
+	background:;
+	border-radius:20px 20px 0 0;
+	background-color:#00F;
+}
+header > #h_bawah {
+	height:20px;
+	background:#000;
+}
+section {
+	height: 400px;
+	background:#D2D3D5;
+	border:1px solid black;
+}
+#left {
+	width:55%;
+	height:400px;
+	box-sizing:border-box;
+	float:left;
+}
+#left img {
+	width:400px;
+	height:300px;
+	position:relative;
+	top:50px;
+	left:150px;
+	box-shadow:0px 2px 2px black, 0px -2px 2px black, 2px 0px 2px black, -2px 0px 2px black;
+}
+#right {
+	width:45%;
+	height:400px;
+	box-sizing:border-box;
+	float:right;
+}
+#right div {
+	position:relative;
+	top:50px;
+}
+ul {
+	list-style-image: url(../image/list2.gif);
+	position: relative;
+    left: 40px;
+    top: 22px;
+}
+li {
+	padding:10px;
+}
+#right a {
+	text-decoration:none;
+	font-size:24px;
+	color:black;
+	text-shadow:1px 1px 1px #0000FF;
+	position:relative;
+	top:-5px;
+}
+#right a:hover {
+	text-shadow:1px 1px 1px #FF0000;
+	font-size:28px;
+	font-weight:bold;
+}
+footer #f_atas{
+	height:20px;
+	background:#000;
+}
+footer > #f_bawah {
+	width:1024px;
+	height:120px;
+	background:#00F;
+	border-radius:0 0 20px 20px;
+}

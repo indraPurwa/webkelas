@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+table {
+  width: 100%;
+  height: auto;
+  border:1px solid black;
+  border-top:0;
+}
+thead th {
+  padding: 10px 10px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #000;
+  font-weight: normal;
+  -moz-box-shadow: 0px -1px 4px #000;
+  -webkit-box-shadow: 0px -1px 4px #000;
+  box-shadow: 0px -1px 4px #000;
+  text-shadow: 1px 1px 1px #000;
+}
+
+tbody th {
+  text-align: right;
+  padding: 10px;
+  color: #333;
+  text-shadow:1px 1px 1px #ccc;
+  background-color: #f9f9f9;
+  border-right:1px dotted #999;
+  border-bottom:1px solid black;
+}
+
+tbody td{
+  padding:10px;
+  background-color:#f0f0f0;
+  border-right:1px dotted #999;
+  text-shadow:-1px 1px 1px #fff;
+  text-transform:uppercase;
+  color:#333;
+  border-bottom:1px solid black;
+}
+.tombol {
+	float:left;
+	width:100%;
+	height:30px;
+	background:none repeat scroll 0% 0% rgba(0, 0, 0, 0.4);
+}
+.tombol span {
+  margin-left: 10px;
+  font-family: callibri;
+  position: relative;
+  top: 5px;
+}
+#pengumuman {
+	height:250px;
+	background:#F5F5F5;
+	border-left:1px solid black;
+	border-right:1px solid black;
+  padding: 20px;
+  margin-top: 30px;
+}
+.pengumuman-lain {
+  margin-top: 20px;
+}
+.list {
+	float:left;
+	width:100%;
+	height:auto;
+	background:#F5F5F5;
+}
+.list div.list-header {
+	font-weight: bold;
+	background: none repeat scroll 0% 0% #0FF;
+	font-stretch: expanded;
+	font-size: 16px;
+	border: 1px solid #000;
+	text-align: center;
+	padding: 10px;
+}
+#left .list:first-child div.list-header {
+	border-radius: 20px 20px 0 0;
+}
