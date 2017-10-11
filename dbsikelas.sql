@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2016 at 03:01 AM
+-- Generation Time: May 07, 2016 at 08:02 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -43,8 +43,7 @@ CREATE TABLE IF NOT EXISTS `anggota_si_c_2014` (
 --
 
 INSERT INTO `anggota_si_c_2014` (`nim`, `nama`, `ttl`, `jk`, `alamat`, `no_telephon`, `foto`, `hobi`, `biografi`) VALUES
-(14540065, 'indra purwa laksana', 'Tegal, 03 oktober 1996', 'laki-laki', 'desa ketileng rt.05/rw.02 kramat tegal', '087897732401', 'indra.jpg', 'semua yang berguna', 'pernah sekolah di smk ypt kota tegal'),
-(14540070, 'ira wulandari', 'nganjuk, 03 agustus 1996', 'perempuan', 'palembang', '085344', 'Tri canovanty.JPG', 'nggosip', 'pernah sekolah di nganjuk jawa timur');
+(14540065, 'indra purwa laksana', 'Tegal, 03 oktober 1996', 'laki-laki', 'desa ketileng rt.05/rw.02 kramat tegal', '087897732401', 'indra.jpg', 'semua yang berguna', 'pernah sekolah di smk ypt kota tegal');
 
 -- --------------------------------------------------------
 

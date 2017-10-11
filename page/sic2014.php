@@ -24,27 +24,29 @@ if($pagination == "")
   $pagination = 0;
 $berita_per_hal= 10;
 $tmp_jml_baris = $conn->query("SELECT * FROM `anggota_si_c_2014`;");
-$jml_baris = $tmp_jml_baris->num_rows;
-$jml_page = ceil($jml_baris / $berita_per_hal);
-$mulai_berita = $pagination * $berita_per_hal;
+if($tmp_jml_baris){
+  $jml_baris = $tmp_jml_baris->num_rows;
+  $jml_page = ceil($jml_baris / $berita_per_hal);
+  $mulai_berita = $pagination * $berita_per_hal;
 
-$berita = $conn->query("SELECT * FROM `anggota_si_c_2014` LIMIT $mulai_berita, $berita_per_hal;");
-$a = 1;
-while ($data = $berita->fetch_assoc() ) {
-  echo '<tr>'
-      .'<th scope="row">'.$a.'</th>'
-      .'<td><a href="?page=tampilanggota&nim='.$data['nim'].'">'.$data['nama'].'</a></td>'
-      .'<td><a href="?page=tampilanggota&nim='.$data['nim'].'">'.$data['nim'].'</a></td>'
-    .'</tr>';
-    $a++;
-}
-if($jml_page == 1)
-  echo '<td colspan="3" class="pagination">Page 1</td>';
-elseif($jml_page > 1) {
-  echo '<td colspan="3" class="pagination">Page ';
-  for($a = 0; $a < $jml_page; $a++)
-    echo '<a href="?page=berita&pagination='.$a.'">'.$a.'</a> ';
-  echo '</td';
+  $berita = $conn->query("SELECT * FROM `anggota_si_c_2014` LIMIT $mulai_berita, $berita_per_hal;");
+  $a = 1;
+  while ($data = $berita->fetch_assoc() ) {
+    echo '<tr>'
+        .'<th scope="row">'.$a.'</th>'
+        .'<td><a href="?page=tampilanggota&nim='.$data['nim'].'">'.$data['nama'].'</a></td>'
+        .'<td><a href="?page=tampilanggota&nim='.$data['nim'].'">'.$data['nim'].'</a></td>'
+      .'</tr>';
+      $a++;
+  }
+  if($jml_page == 1)
+    echo '<td colspan="3" class="pagination">Page 1</td>';
+  elseif($jml_page > 1) {
+    echo '<td colspan="3" class="pagination">Page ';
+    for($a = 0; $a < $jml_page; $a++)
+      echo '<a href="?page=berita&pagination='.$a.'">'.$a.'</a> ';
+    echo '</td';
+  }
 }
 ?>
   </tbody>

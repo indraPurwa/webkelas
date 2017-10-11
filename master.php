@@ -56,7 +56,6 @@
 		if(cek_session('username')) {
 			if($page == "pengumuman")
 				include "page/pengumuman.php";
-
 			elseif($page == "chatting")
 				include "memberarea/chatting.php";
 			elseif($page == "tambahberita")
@@ -84,7 +83,6 @@
         include "administrator/managelinklain.php";
       elseif($page == "manageanggota")
         include "administrator/manageanggota.php";
-
 		}
 		if(!cek_session('username') and $page = ""){
 			echo '<p>Anda belum login atau halaman yang anda klik salah. Silahkan login terlebih dahulu jika anda adalah anggota atau administrator</p>';
@@ -100,9 +98,14 @@
         <ul class="widget-content">
         <?php
           $data = $conn->query("SELECT * from berita ORDER BY IdBerita DESC LIMIT 3");
-          while ($berita = $data->fetch_assoc()) {
-            echo '<li><a href="?page=berita&aksi=tampil_berita&id='.$berita['IdBerita'].'">'.$berita['jdl_berita'].'</a> ('.$berita['tgl_berita'].')</li>';
+          if($data) {
+            while ($berita = $data->fetch_assoc()) {
+              echo '<li><a href="?page=berita&aksi=tampil_berita&id='.$berita['IdBerita'].'">'.$berita['jdl_berita'].'</a> ('.date('d/m/Y', strtotime($berita['tgl_berita'])).')</li>';
+            }
+          } else {
+            echo NULL;
           }
+
         ?>
       </ul>
       </div>
@@ -111,8 +114,12 @@
         <ul class="widget-content">
         <?php
           $data = $conn->query("SELECT * from link_lain LIMIT 3");
-          while ($link = $data->fetch_assoc()) {
-            echo '<li><a href="'.$link['link'].'">'.$link['judul'].'</a> ('.$link['keterangan'].')</li>';
+          if($data) {
+            while ($link = $data->fetch_assoc()) {
+              echo '<li><a href="'.$link['link'].'">'.$link['judul'].'</a> ('.$link['keterangan'].')</li>';
+            }
+          } else {
+            echo NULL;
           }
         ?>
       </ul>
